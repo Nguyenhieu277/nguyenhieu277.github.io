@@ -92,7 +92,7 @@ Bước tiếp theo, ta đưa các vector có độ tương đồng cao và prom
 ## Xây dựng chatbot đơn giản với RAG
 ### Bước 1: Load model từ Huggingface 
 
-```
+```python
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig,pipeline,BitsAndBytesConfig
 
@@ -127,7 +127,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 ### Bước 2: Chia nhỏ đoạn văn bản (Chunks)
 
-```
+```python
 from langchain.text_splitter import CharacterTextSplitter
 def get_text_chunks(text):
     text_splitter = CharacterTextSplitter(
@@ -142,7 +142,7 @@ def get_text_chunks(text):
 
 ### Bước 3: Tạo vector database
 
-```
+```python
 from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings, HuggingFaceEmbeddings
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings, GPT4AllEmbeddings
@@ -174,7 +174,7 @@ db = vectorstore.as_retriever(search_kwargs={'k': 1}) # lấy 1 tài liệu liê
 ```
 ### Bước 4: Tạo hệ thống truy xuất
 
-```
+```python
 from langchain.chains import RetrievalQA, RetrievalQAWithSourcesChain
 from langchain import PromptTemplate
 import transformers
