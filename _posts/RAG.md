@@ -1,5 +1,8 @@
-# RAG - Ứng Dụng Truy Xuất Tri Thức Để Cải Thiện Mô Hình Sinh Văn Bản
-
+---
+title: RAG - Ứng Dụng Truy Xuất Tri Thức Để Cải Thiện Mô Hình Sinh Văn Bản
+date: 2025-11-3 00:00:00 + 0800
+categories: NLP
+---
 **created by: Nguyễn Phạm Trung Hiếu**
 
 
